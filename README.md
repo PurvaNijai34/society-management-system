@@ -9,8 +9,7 @@ Harmony Hive is a web-based application that digitalizes the daily operations of
 - 👥 Member Management  
 - 💰 Maintenance & Payment Records  
 - 📢 Notices & Announcements  
-- 🐞 Complaint Registration  
-- 📊 Polls & Community Decisions  
+- 🐞 Complaint Registration    
 - 🖼️ Photo Gallery & Reviews  
 
 ---
@@ -52,16 +51,5 @@ Harmony Hive is a web-based application that digitalizes the daily operations of
 
 ---
 
-## 📌 Project Goal
-To create a digital platform that improves society management through automation, transparency, and better coordination among residents and committee members.
-
----
-
-## 📬 Want to Improve It?
-You can add:
-- Badges 🏅  
-- Screenshots 📸  
-- Setup instructions for deployment 🌐  
-- Contributors section 👤  
 
 Just ask and I’ll help you customize further! 😊
