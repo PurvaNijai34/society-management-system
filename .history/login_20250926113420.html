@@ -1,0 +1,182 @@
+<?php
+session_start();
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Udhyam Kunj</title>
+    <!-- <link rel="stylesheet" href="style1.css"> -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/login-modal.css">
+    <link rel="stylesheet" href="./css/user-loginmodal.css">
+    <script src="https://kit.fontawesome.com/2edfbc5391.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <div class="page">
+        <div class="navbar">
+            <img src="Images/shlogo.jpg" class="logo">
+            <h1>Udhyam <span style="font-family: 'Merienda', cursive;
+            color:rgb(20, 76, 80);">Kunj</span></h1>
+            <nav>
+                <ul>
+                    <li><a href="" class="active">Home</a></li>
+                    <li><a href="#rules">Rules & Regulations</a></li>
+                    <!-- <li>   <a href="./Adminlogin.php" id="btn"> Admin Login</a> </li> -->
+                    <li> <button id="adminLoginBtn" class="button"> <span> Admin Login</span> </button></li>
+                    <div id="adminModal" class="admin-popup">
+                        <div class="admin-popup-content">
+                            <span class="close-popup">&times;</span>
+                            <h2>Admin Login</h2>
+                            <form id="adminLoginForm" action="Adminlogin.php" method="POST">
+                                <label for="username">Username:</label>
+                                <input type="text" id="username" name="adminusername" required>
+    
+                                <label for="password">Password:</label>
+                                <input type="password" id="password" name="admincode" required>
+    
+                                <button type="submit" name="logina">Login</button>
+                            </form>
+                        </div>
+                    </div>
+                </ul>
+            </nav>
+            <!-- <a href="Adminlogin.php" class="btn">Admin Login</a> -->
+        </div>
+        <div class="row">
+            <div class="column" id="col-1">
+                <h1 class="typewriter" id="typewriter-heading"> Welcome To Udhyam Kunj </h1>
+                <p class="description">Udhyam Kunj Society is a residential community offering amenities like security, parking, and common
+                    areas. Managed by a resident committee, it ensures proper maintenance and smooth daily operations,
+                    fostering a well-organized living environment.
+                    .</p>
+                <button id="openModalBtn" class="button"> <span>Login </span></button>
+                <!-- Modal structure -->
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <!-- Login Form -->
+                        <div id="loginForm" class="form" >
+                            <h2>Login</h2>
+                            <form method="post" action="login.php">
+                                <label for="username">Username:</label>
+                                <input type="text" id="username" name="username" required><br><br>
+                                <label for="password">Password:</label>
+                                <input type="password" id="password" name="password" required><br><br>
+                                <button type="submit" name="userloginbutton">Login</button>
+                            </form>
+                            <p>Don't have an account? <a href="#" id="openSignUp">Sign Up</a></p>
+                        </div>
+
+                        <!-- Sign Up Form (Initially Hidden) -->
+                        <div id="signUpForm" class="form" style="display:none;">
+                            <h2>Sign Up</h2>
+                            <form  action="register.php"  method="post">
+                                <label for="newUsername">Username:</label>
+                                <input type="text" id="newUsername" name="username" required><br>
+
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required><br>
+                                <label for="flatno">Flat No:</label>
+                                <input type="text" id="flatno" name="flatno" required><br>
+                                <label for="famno">Family Members No:</label>
+                                <input type="number" id="famno" name="famno" required><br>
+                                <label for="newPassword">Password:</label>
+                                <input type="password" id="newPassword" name="password" required><br><br>
+                                <button type="submit">Sign Up</button>
+                            </form>
+                            <p>Already have an account? <a href="#" id="backToLogin">Login</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column" id="col-2">
+                <img src="./Images/building1.jpg" alt="" class="building-image">
+            </div>
+
+        </div>
+
+    </div>
+    <hr>
+    <div id="rules">
+        <h1>Rules and Regulations</h1>
+        <hr>
+        <div class="list-of-rules">
+            <li>Members and residents are required to keep their flats/homes and nearby premises clean and habitable.
+            </li>
+            <li>The residents should also maintain proper cleanliness etiquette while using common areas, parking lot,
+                etc. and not throw litter from their balconies and windows.</li>
+            <li>Members must regularly pay the maintenance charges and all other dues necessitated by the society.</li>
+            <li>Keeping pets is allowed after submitting the required NOC to the society. But if pets like dogs are
+                creating any kind of disturbance to other society members then the pets won’t be allowed.</li>
+            <li>Every member of the society should park their vehicles in their respective allotted parking spaces only.
+            </li>
+            <li> After using the community hall for any event or function it should be cleaned and no damages should be
+                caused.</li>
+            <li>No member can occupy the area near their front doors, corridors, passage for their personal usage.</li>
+            <li>Salesmen, vendors or any other sellers are not allowed to enter the premises.</li>
+            <li>Wastage and over usage of water is not allowed.</li>
+            <li>Smoking in lobbies, passage is not allowed. If any irresponsible person is found smoking in the no
+                smoking zone, he/she shall be charged with penalty.</li>
+        </div>
+
+    </div>
+    <!-- footer code -->
+    <hr>
+    <footer>
+        <div class="main-content">
+            <div class="left box">
+                <h2>About Us</h2>
+                <div class="content">
+                    <p>
+                        Harmony Hive is webapp where society members can get all the updates related to their society.
+                        The members also get notified with notices and events held in society and can see information
+                        about members in society. Members can also post complaints regarding any issue in society.
+                    </p>
+                </div>
+            </div>
+            <div class="center box adjust">
+                <div class="cen">
+                    <h2>Quick Links</h2>
+                    <ul>
+                        <li><a href="login.html">Home</a></li>
+                        <li><a href="#Loginform">Login</a></li>
+                        <li><a href="#rules">Rules and Regulations</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="right box">
+                <h2>Address</h2>
+                <div class="content">
+                    <div class="place">
+                        <span class="fas fa-map-marker-alt"></span>
+                        <span class="text"> Borivali (E)</span>
+                    </div>
+                    <div class="phone">
+                        <span class="fas fa-phone-alt"></span>
+                        <span class="text">+91 8779635278</span>
+                    </div>
+                    <div class="email">
+                        <span class="fas fa-envelope"></span>
+                        <span class="text">harmonyhive@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <h3>Copyright @2025 | Harmony Hive.</h3>
+        </div>
+    </footer>
+    <script src="./js/login-modal.js"></script>
+    <script src="./js/user-login.js"></script>
+    <script src="./js/typewriter_animation.js"></script>
+</body>
+
+</html>
